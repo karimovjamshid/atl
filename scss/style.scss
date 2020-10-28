@@ -1,0 +1,453 @@
+@import 'variables';
+@import 'general';
+
+/* Header
+===================*/
+.header{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 35px;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+
+    }
+}
+.logo{
+    a{
+        font-family: $heading;
+        font-size: 3.4rem;
+        color: $accent;
+        text-transform: uppercase;
+    }
+}
+.lang{
+    display: flex;
+    &__btn{
+        margin-left: 1rem;
+        transition: box-shadow .3s linear, color .3s linear;
+        font-size: 1.53rem;
+        font-family: $text;
+        color: $white;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+        padding: 0.3em .8em;
+        overflow: hidden;
+        display: block;
+        border: 1px solid transparent;
+        background-color: transparent;
+        border-radius: .6em;
+        &:focus{
+            border-color: $accent;
+            color: $accent;
+            box-shadow: $shadow;
+        }
+        &:hover{
+            color: darken($white, 30%);
+        }
+    }
+}
+
+
+
+/* Hero
+===================*/
+.hero{
+    background: url('../img/hero-bg.png') no-repeat top center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &__heading{
+        font-size: 4rem;
+        line-height: 1.2;
+        color: $white;
+        font-weight: 400;
+        font-family: $text;
+        a{
+            color: $accent;
+        }
+        @media (max-width:$tablet){
+            font-size: 3rem;
+        }
+        @media (max-width:$mobile){
+            font-size: 2.5rem;
+        }
+        @media (max-width:$mobile-sm){
+            font-size: 2rem;
+        }
+        
+    }
+    &__text{
+        font-size: 1.4rem;
+        line-height: 1.3;
+        color: $white;
+        margin: 1rem 0;
+        @media (max-width:$tablet){
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    }
+}
+.btn-group{
+    margin-top: 1rem;
+}
+/* About
+===================*/
+.about{
+    padding: 4rem 0;
+    background-color: $dark;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        @media (max-width:$mobile){
+            justify-content: center;
+        }
+    }
+   
+    &__info{ 
+        flex-basis: 50%;
+        @media (max-width:$mobile){
+            flex-basis: 90%;
+        }
+    }
+    &__img{
+        flex-basis: 45%;
+        height: auto;
+        @media (max-width:$mobile){
+            flex-basis: 90%;
+            margin-top: 2rem;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    &__text{
+        font-size: 1.46rem;
+        color: $white;
+        line-height: 1.4;
+        @media (max-width:$tablet){
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+    }
+    &__heading{
+        font-size: 3.33rem;
+        color: $accent;
+        font-family: $text;
+        font-weight: 400;
+        padding-left: 2rem;
+        margin-bottom: 3rem;
+        @media (max-width:$tablet){
+            font-size: 2.5rem;
+        }
+        @media (max-width:$mobile-sm){
+            font-size: 2rem;
+        }
+    }
+}
+
+/* Transport park
+===================*/
+.park{
+    padding: 4rem 0;
+    background-color: $gray;
+    &__heading{
+        font-size: 3.33rem;
+        color: $accent;
+        font-family: $text;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 1rem;
+        @media (max-width:$tablet){
+            font-size: 2.5rem;
+        }
+        @media (max-width:$mobile-sm){
+            font-size: 1.8rem;
+        }
+    }
+}
+.park-item{
+    margin-bottom: 1rem;
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $white;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        @media (max-width:$laptop){
+            flex-direction: column;
+        }
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 1.26rem;
+        color: $white;
+        font-family: $text;
+        margin-bottom: 1rem;
+        @media (max-width:$mobile){
+            font-size: 1rem;
+        }
+    }
+    &__info{
+        margin-left: 2rem;
+        @media (max-width:$laptop){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    &__info-group{
+        background-color: $dark;
+        border-radius: 2em;
+        padding: .5em 1.2em;
+        color: $white;
+        font-weight: 500;
+        font-family: $text;
+        font-size: 1.26rem;
+        margin-bottom: 0.6em;
+        @media (max-width:$mobile){
+            font-size: 1rem;
+        }
+        @media (max-width:$mobile-sm){
+            font-size: 0.93rem;
+        }
+    }
+    &__weight{
+        background-color: $accent;
+        border-radius: 2em;
+        padding: .5em 1.2em;
+        color: $white;
+        font-weight: 500;
+        font-family: $text;
+        font-size: 1.26rem;
+        display: inline-block;
+        @media (max-width:$mobile-sm){
+            font-size: 0.93rem;
+        }
+    }
+    &__photo{
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.2;
+        color: $gray;
+        text-align: center;
+        @media (max-width:$laptop){
+            margin: 1rem 0;
+        }
+        @media (max-width:$mobile-sm){
+            font-size: 1.1rem;
+        }
+    }
+    &__img{
+        border-radius: 1rem;
+        img{
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 1rem;
+        }
+        @media (max-width:$laptop){
+            margin-bottom: 1rem;
+        }
+    }
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    &__num{
+        width: 43px;
+        height: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $white;
+        border-radius: .73em;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $white;
+        margin-left: .8rem;
+        &.active{
+            background-color: $accent;
+            border-color: $accent;
+        }
+    }
+}
+/* Gallery
+===================*/
+.gallery{
+    padding: 4rem 0;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width:$mobile-sm){
+            justify-content: center;
+        }
+    }
+    &__img{
+        flex-basis: 24%;
+        margin-bottom: 1.2rem;
+        @media (max-width:$mobile){
+            flex-basis: 48%;
+        }
+        @media (max-width:$mobile-sm){
+            flex-basis: 90%;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__heading{
+        font-weight: 500;
+        font-size: 3rem;
+        color: $accent;
+        font-family: $text;
+        text-align: center;
+        margin-bottom: 2rem;
+        @media (max-width:$mobile-sm){
+            font-size: 2rem;
+        }
+    }
+}
+/* Contact
+===================*/
+.contact{
+    padding: 4rem 0;
+    background-color: $dark2;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width:$laptop){
+            justify-content: center;
+        }
+    }
+    &__heading{
+        font-weight: 500;
+        font-size: 3rem;
+        color: $white;
+        font-family: $text;
+        text-align: center;
+        margin-bottom: 2rem;
+        @media (max-width:$mobile-sm){
+            font-size: 2rem;
+        }
+    }
+    &__form{
+        flex-basis: 45%;
+        margin: 0 auto;
+        @media (max-width:$laptop){
+            flex-basis: 90%;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input{
+            background-color: transparent;
+            font-family: $text;
+            font-size: 1.23rem;
+            color: $white;
+            padding: .5em 1.2em;
+            border: 1px solid $white;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            max-width: 650px;
+            width: 100%;
+            &:focus{
+                outline: none;
+            }
+        }
+        button{
+            margin: 0 auto;
+        }
+    }
+    &__map{
+        flex-basis: 50%;
+        @media (max-width:$laptop){
+            flex-basis: 90%;
+        }
+    }
+}
+.contact-map{
+    width: 600px;
+    height: 400px;
+    @media (max-width:$mobile){
+        width: 400px;
+    }
+    @media (max-width:$mobile-sm){
+        width: 280px;
+    }
+}
+/* Footer
+===================*/
+.footer{
+    background-color: $white;
+    padding: 2rem 0 1rem;
+    &__content{
+        display: flex;
+        flex-direction: column;
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        align-items: center;
+        color: $dark;
+        font-size: 1.2rem;
+        @media (max-width:$laptop){
+            justify-content: center;
+        }
+    }
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        color: $dark;
+        font-size: 1.2rem;
+        @media (max-width:$laptop){
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    &__info{
+        @media (max-width:$mobile-sm){
+            flex-basis: 90%;
+            text-align: center;
+        }
+    }
+    &__copy{
+        @media (max-width:$laptop){
+            flex-basis: 90%;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+    }
+    &__address{
+        @media (max-width:$laptop){
+            flex-basis: 90%;
+            font-size: 1rem;
+        }
+    }
+}
