@@ -262,6 +262,10 @@ ul, li {
     @media (max-width: 420px) {
       .park__heading {
         font-size: 1.8rem; } }
+  .park__content {
+    display: none; }
+    .park__content--active {
+      display: block; }
 
 .park-item {
   margin-bottom: 1rem; }
@@ -322,7 +326,7 @@ ul, li {
     color: #fff;
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
-    font-size: 1.26rem;
+    font-size: 1.16rem;
     margin-bottom: 0.6em; }
     @media (max-width: 670px) {
       .park-item__info-group {
@@ -396,9 +400,11 @@ ul, li {
     font-weight: 500;
     color: #fff;
     margin-left: .8rem; }
-    .pagination__num.active {
+    .pagination__num--active {
       background-color: #DF4343;
       border-color: #DF4343; }
+    .pagination__num:hover {
+      cursor: pointer; }
 
 /* Gallery
 ===================*/

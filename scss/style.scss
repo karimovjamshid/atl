@@ -176,6 +176,12 @@
             font-size: 1.8rem;
         }
     }
+    &__content{
+        display: none;
+        &--active{
+            display: block;
+        }
+    }
 }
 .park-item{
     margin-bottom: 1rem;
@@ -216,7 +222,7 @@
         color: $white;
         font-weight: 500;
         font-family: $text;
-        font-size: 1.26rem;
+        font-size: 1.16rem;
         margin-bottom: 0.6em;
         @media (max-width:$mobile){
             font-size: 1rem;
@@ -280,9 +286,12 @@
         font-weight: 500;
         color: $white;
         margin-left: .8rem;
-        &.active{
+        &--active{
             background-color: $accent;
             border-color: $accent;
+        }
+        &:hover{
+            cursor: pointer;
         }
     }
 }
